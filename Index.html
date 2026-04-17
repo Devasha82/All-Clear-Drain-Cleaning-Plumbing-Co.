@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Clear Drain Cleaning & Plumbing Co. | Memphis, TN</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#1c2b3a;
+  --slate-mid:#243447;
+  --slate-light:#2f4460;
+  --steel:#3a7ca5;
+  --steel-light:#5094bc;
+  --steel-pale:#e8f2f8;
+  --gold:#c9a84c;
+  --gold-light:#e0c068;
+  --white:#ffffff;
+  --off:#f7f9fb;
+  --text:#1a2530;
+  --gray:#5e7080;
+  --gray-light:#dce4ea;
+  --green:#2e8b57;
+  --radius:8px;
+  --shadow:0 2px 16px rgba(28,43,58,0.1);
+  --shadow-md:0 6px 32px rgba(28,43,58,0.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;line-height:1.65;font-size:16px}
+
+/* ── NAVBAR ── */
+.navbar{
+  background:var(--slate);
+  padding:0 6%;height:72px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:200;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo-icon{
+  width:44px;height:44px;border-radius:6px;
+  background:var(--steel);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.logo-icon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}
+.logo-wordmark{line-height:1.2}
+.logo-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:0.3px}
+.logo-tagline{font-size:0.67rem;color:rgba(255,255,255,0.5);font-weight:400;letter-spacing:1.8px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.88rem;font-weight:500;letter-spacing:0.2px;transition:color 0.18s}
+.nav-links a:hover{color:#fff}
+.nav-divider{width:1px;height:22px;background:rgba(255,255,255,0.15)}
+.nav-phone{color:rgba(255,255,255,0.85)!important;font-weight:600!important}
+.nav-cta{
+  background:var(--steel);color:#fff;
+  border:none;cursor:pointer;
+  padding:10px 22px;border-radius:5px;
+  font-family:'Source Sans 3',sans-serif;
+  font-weight:600;font-size:0.88rem;
+  text-decoration:none;letter-spacing:0.3px;
+  transition:background 0.2s;
+}
+.nav-cta:hover{background:var(--steel-light)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* ── ANNOUNCEMENT BAR ── */
+.ann-bar{
+  background:var(--steel);
+  text-align:center;padding:9px 5%;
+  font-size:0.8rem;color:rgba(255,255,255,0.9);
+  letter-spacing:0.3px;
+  display:flex;justify-content:center;align-items:center;gap:28px;flex-wrap:wrap;
+}
+.ann-bar span{display:flex;align-items:center;gap:6px}
+.ann-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.5)}
+
+/* ── HERO ── */
+.hero{
+  background:var(--slate);
+  min-height:86vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:stretch;
+  position:relative;overflow:hidden;
+}
+.hero-left{
+  padding:80px 6% 80px 6%;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;z-index:1;
+}
+.hero-right{position:relative;overflow:hidden;min-height:500px}
+.hero-right img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;filter:brightness(0.75) saturate(0.9);
+}
+.hero-right::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to right,var(--slate) 0%,transparent 35%);
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(201,168,76,0.4);
+  color:var(--gold-light);padding:6px 14px;border-radius:3px;
+  font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:26px;width:fit-content;
+}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.4rem,4vw,3.6rem);
+  color:#fff;line-height:1.12;
+  letter-spacing:-0.5px;margin-bottom:20px;
+  font-weight:800;
+}
+h1 .accent{color:var(--steel-light)}
+.hero-sub{
+  font-size:1.05rem;color:rgba(255,255,255,0.62);
+  max-width:460px;margin-bottom:36px;
+  font-weight:400;line-height:1.7;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.btn-primary{
+  background:var(--steel);color:#fff;
+  border:none;cursor:pointer;
+  padding:14px 30px;border-radius:5px;
+  font-family:'Source Sans 3',sans-serif;
+  font-weight:600;font-size:0.97rem;
+  text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+  transition:all 0.2s;letter-spacing:0.2px;
+}
+.btn-primary:hover{background:var(--steel-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(58,124,165,0.35)}
+.btn-secondary{
+  background:transparent;color:#fff;
+  border:1.5px solid rgba(255,255,255,0.28);
+  cursor:pointer;padding:13px 26px;border-radius:5px;
+  font-family:'Source Sans 3',sans-serif;
+  font-weight:600;font-size:0.95rem;
+  text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+  transition:all 0.2s;
+}
+.btn-secondary:hover{border-color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.06)}
+.hero-trust{
+  display:flex;gap:24px;flex-wrap:wrap;
+  padding-top:32px;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+.trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.5);font-size:0.83rem;font-weight:500}
+.trust-icon{
+  width:20px;height:20px;border-radius:50%;
+  background:rgba(58,124,165,0.25);border:1px solid rgba(58,124,165,0.4);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.trust-icon svg{width:10px;height:10px;stroke:var(--steel-light);fill:none;stroke-width:3}
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .hero-left{padding:64px 5% 60px}
+}
+
+/* ── STATS ── */
+.stats-bar{
+  background:var(--off);
+  border-bottom:1px solid var(--gray-light);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.stat-cell{
+  padding:24px 20px;text-align:center;
+  border-right:1px solid var(--gray-light);
+  transition:background 0.2s;
+}
+.stat-cell:last-child{border:none}
+.stat-cell:hover{background:#fff}
+.stat-val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--slate);line-height:1}
+.stat-unit{font-size:1.1rem;color:var(--steel);font-family:'Source Sans 3',sans-serif;font-weight:600}
+.stat-lbl{font-size:0.76rem;color:var(--gray);font-weight:500;margin-top:5px;text-transform:uppercase;letter-spacing:0.8px}
+.stat-stars{color:var(--gold);font-size:1rem;letter-spacing:3px;margin-bottom:4px}
+@media(max-width:640px){.stats-bar{grid-template-columns:repeat(2,1fr)}.stat-cell:nth-child(2){border-right:none}.stat-cell:nth-child(3){border-top:1px solid var(--gray-light)}.stat-cell:nth-child(4){border-top:1px solid var(--gray-light);border-right:none}}
+
+/* ── SECTION SHARED ── */
+section{padding:84px 6%}
+.eyebrow{
+  display:block;font-size:0.72rem;font-weight:600;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--steel);margin-bottom:12px;text-align:center;
+}
+h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.9rem,3.5vw,2.6rem);
+  color:var(--text);text-align:center;
+  line-height:1.15;margin-bottom:10px;font-weight:700;
+}
+.sec-sub{
+  text-align:center;color:var(--gray);
+  font-size:0.97rem;max-width:520px;
+  margin:0 auto 52px;line-height:1.7;
+}
+
+/* ── GALLERY ── */
+#gallery{background:#fff;padding:72px 6%}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:3px;margin-top:36px;
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-md);
+}
+.gal-item{
+  position:relative;overflow:hidden;
+  aspect-ratio:4/3;
+}
+.gal-item img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;
+  transition:transform 0.5s ease;
+  filter:saturate(0.85);
+}
+.gal-item:hover img{transform:scale(1.04);filter:saturate(1)}
+.gal-caption{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(28,43,58,0.88) 0%,transparent 100%);
+  padding:28px 18px 16px;
+  color:#fff;font-size:0.85rem;font-weight:600;
+  letter-spacing:0.4px;
+  transform:translateY(4px);transition:transform 0.3s;
+}
+.gal-item:hover .gal-caption{transform:translateY(0)}
+@media(max-width:680px){.gallery-grid{grid-template-columns:1fr}}
+
+/* ── SERVICES ── */
+#services{background:var(--off)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray-light);border:1px solid var(--gray-light);border-radius:var(--radius);overflow:hidden}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+.svc-card{
+  background:#fff;
+  padding:32px 28px;
+  transition:background 0.2s;
+  position:relative;
+}
+.svc-card:hover{background:var(--steel-pale)}
+.svc-num{
+  font-family:'Playfair Display',serif;
+  font-size:2.4rem;font-weight:700;
+  color:var(--gray-light);line-height:1;
+  margin-bottom:16px;
+  transition:color 0.2s;
+}
+.svc-card:hover .svc-num{color:var(--steel-pale)}
+.svc-label{
+  display:inline-block;
+  font-size:0.68rem;font-weight:600;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--steel);
+  margin-bottom:10px;
+}
+.svc-card h3{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;line-height:1.3}
+.svc-card p{font-size:0.87rem;color:var(--gray);line-height:1.68}
+.svc-card .svc-arrow{
+  display:inline-block;margin-top:14px;
+  color:var(--steel);font-size:0.82rem;font-weight:600;
+  letter-spacing:0.3px;
+}
+
+/* ── HOW IT WORKS ── */
+#hiw{background:var(--slate)}
+#hiw .eyebrow{color:rgba(255,255,255,0.45)}
+#hiw h2{color:#fff}
+#hiw .sec-sub{color:rgba(255,255,255,0.5)}
+.steps-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:40px;position:relative;
+}
+.steps-row::before{
+  content:'';position:absolute;
+  top:26px;left:calc(16.66% + 10px);right:calc(16.66% + 10px);
+  height:1px;background:rgba(255,255,255,0.1);z-index:0;
+}
+@media(max-width:680px){.steps-row{grid-template-columns:1fr;gap:28px}.steps-row::before{display:none}}
+.step{position:relative;z-index:1}
+.step-num{
+  width:52px;height:52px;border-radius:50%;
+  background:var(--slate-light);
+  border:1px solid rgba(255,255,255,0.1);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+  font-family:'Playfair Display',serif;
+  font-size:1.2rem;font-weight:700;color:var(--steel-light);
+}
+.step h3{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:10px}
+.step p{font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.68}
+
+/* ── TESTIMONIALS ── */
+#testimonials{background:#fff}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.reviews-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.reviews-grid{grid-template-columns:1fr}}
+.rev-card{
+  background:var(--off);
+  border:1px solid var(--gray-light);
+  border-radius:var(--radius);
+  padding:26px 22px;
+  transition:box-shadow 0.22s,transform 0.22s;
+}
+.rev-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.rev-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.rev-stars{color:var(--gold);font-size:0.85rem;letter-spacing:2px}
+.rev-source{font-size:0.7rem;color:var(--gray);font-weight:500;letter-spacing:0.5px}
+.rev-text{font-size:0.88rem;color:var(--text);line-height:1.7;margin-bottom:18px;font-style:italic;opacity:0.85}
+.reviewer{display:flex;align-items:center;gap:10px}
+.r-init{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--slate);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:700;font-size:0.82rem;
+  font-family:'Playfair Display',serif;flex-shrink:0;
+}
+.r-name{font-size:0.86rem;font-weight:700;color:var(--text)}
+.r-meta{font-size:0.73rem;color:var(--gray)}
+
+/* ── GUARANTEE ── */
+#guarantee{
+  background:var(--slate-mid);
+  padding:72px 6%;
+}
+#guarantee .eyebrow{color:rgba(255,255,255,0.4)}
+#guarantee h2{color:#fff}
+#guarantee .sec-sub{color:rgba(255,255,255,0.5);margin-bottom:48px}
+.g-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);overflow:hidden;max-width:1000px;margin:0 auto}
+@media(max-width:780px){.g-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:440px){.g-row{grid-template-columns:1fr}}
+.g-item{
+  background:rgba(255,255,255,0.04);
+  padding:28px 22px;
+  transition:background 0.2s;
+}
+.g-item:hover{background:rgba(255,255,255,0.08)}
+.g-icon-wrap{
+  width:44px;height:44px;border-radius:6px;
+  background:rgba(58,124,165,0.2);
+  border:1px solid rgba(58,124,165,0.25);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;
+}
+.g-icon-wrap svg{width:20px;height:20px;stroke:var(--steel-light);fill:none;stroke-width:2}
+.g-item h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:6px}
+.g-item p{font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.6}
+
+/* ── FINAL CTA ── */
+#final-cta{
+  background:var(--off);
+  text-align:center;padding:96px 6%;
+}
+#final-cta h2{margin-bottom:14px}
+#final-cta p{color:var(--gray);font-size:1rem;max-width:460px;margin:0 auto 36px;line-height:1.7}
+.cta-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-dark{
+  background:var(--slate);color:#fff;border:none;cursor:pointer;
+  padding:14px 30px;border-radius:5px;
+  font-family:'Source Sans 3',sans-serif;
+  font-weight:600;font-size:0.97rem;
+  text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+  transition:all 0.2s;letter-spacing:0.2px;
+}
+.btn-dark:hover{background:var(--slate-light);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn-outline{
+  background:#fff;color:var(--slate);
+  border:1.5px solid var(--gray-light);cursor:pointer;
+  padding:13px 26px;border-radius:5px;
+  font-family:'Source Sans 3',sans-serif;
+  font-weight:600;font-size:0.95rem;
+  text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+  transition:all 0.2s;
+}
+.btn-outline:hover{border-color:var(--slate);background:var(--off)}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--slate);
+  padding:36px 6%;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+.footer-left{color:rgba(255,255,255,0.4);font-size:0.83rem;line-height:1.7}
+.footer-left strong{color:rgba(255,255,255,0.75);display:block;font-size:0.95rem;margin-bottom:4px;font-family:'Playfair Display',serif;font-weight:600}
+.footer-phone{color:var(--steel-light);font-weight:600;font-size:0.88rem;margin-top:3px}
+.footer-right{color:rgba(255,255,255,0.25);font-size:0.75rem;text-align:right;line-height:1.7}
+@media(max-width:600px){footer{flex-direction:column}.footer-right{text-align:left}}
+
+/* ── CHAT WIDGET ── */
+#chat-widget{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+#chat-bubble{
+  width:60px;height:60px;border-radius:50%;
+  background:var(--slate);
+  border:2px solid rgba(255,255,255,0.12);
+  box-shadow:0 4px 24px rgba(28,43,58,0.4);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform 0.2s,box-shadow 0.2s;position:relative;
+}
+#chat-bubble:hover{transform:scale(1.07);box-shadow:0 8px 32px rgba(28,43,58,0.5)}
+#chat-bubble svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}
+.notif{position:absolute;top:-2px;right:-2px;width:16px;height:16px;background:var(--gold);border-radius:50%;border:2px solid var(--slate);font-size:0.58rem;color:var(--slate);font-weight:800;display:flex;align-items:center;justify-content:center}
+#chat-window{
+  width:min(388px,calc(100vw - 40px));
+  height:min(560px,calc(100vh - 110px));
+  background:#fff;border-radius:10px;
+  box-shadow:0 16px 56px rgba(28,43,58,0.22);
+  display:none;flex-direction:column;overflow:hidden;
+  border:1px solid var(--gray-light);
+  animation:slideUp 0.26s ease;
+}
+#chat-window.open{display:flex}
+@keyframes slideUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.chat-hdr{
+  background:var(--slate);
+  padding:14px 18px;
+  display:flex;align-items:center;gap:12px;
+}
+.chat-av{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--slate-light);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;position:relative;
+}
+.chat-av svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+.chat-dot{position:absolute;bottom:1px;right:1px;width:10px;height:10px;background:#22c55e;border-radius:50%;border:2px solid var(--slate)}
+.chat-hdr-name{color:#fff;font-weight:700;font-size:0.9rem}
+.chat-hdr-status{color:rgba(255,255,255,0.48);font-size:0.71rem}
+.chat-hdr-info{flex:1}
+.chat-close{background:transparent;border:none;cursor:pointer;color:rgba(255,255,255,0.4);width:26px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:5px;transition:background 0.15s;font-size:1.1rem}
+.chat-close:hover{background:rgba(255,255,255,0.1);color:#fff}
+.chat-tabs{display:flex;border-bottom:1px solid var(--gray-light);background:#fff}
+.chat-tab{flex:1;padding:9px 8px;font-size:0.73rem;font-weight:600;border:none;background:transparent;cursor:pointer;color:var(--gray);transition:all 0.18s;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:'Source Sans 3',sans-serif;letter-spacing:0.2px}
+.chat-tab.active{color:var(--slate);border-bottom-color:var(--slate)}
+#chat-messages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+#chat-messages::-webkit-scrollbar{width:3px}
+#chat-messages::-webkit-scrollbar-thumb{background:var(--gray-light);border-radius:3px}
+.msg{display:flex;gap:7px;max-width:90%}
+.msg.user{align-self:flex-end;flex-direction:row-reverse}
+.msg-av{width:28px;height:28px;border-radius:50%;background:var(--slate);display:flex;align-items:center;justify-content:center;flex-shrink:0;align-self:flex-end}
+.msg-av svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2}
+.msg-bubble{padding:10px 14px;border-radius:12px;font-size:0.86rem;line-height:1.56}
+.msg.bot .msg-bubble{background:var(--off);border:1px solid var(--gray-light);color:var(--text);border-bottom-left-radius:3px}
+.msg.user .msg-bubble{background:var(--slate);color:#fff;border-bottom-right-radius:3px}
+.msg-time{font-size:0.64rem;color:#b0bac4;margin-top:3px;text-align:right}
+.typing-dots{display:flex;gap:4px;align-items:center;padding:10px 14px;background:var(--off);border:1px solid var(--gray-light);border-radius:12px;border-bottom-left-radius:3px}
+.typing-dots span{width:6px;height:6px;background:var(--gray);border-radius:50%;animation:tdot 1.2s infinite}
+.typing-dots span:nth-child(2){animation-delay:.2s}
+.typing-dots span:nth-child(3){animation-delay:.4s}
+@keyframes tdot{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
+.chat-input-row{padding:10px 12px;border-top:1px solid var(--gray-light);display:flex;gap:8px;align-items:flex-end;background:#fff}
+#chat-input{flex:1;border:1px solid var(--gray-light);border-radius:7px;padding:9px 12px;font-family:'Source Sans 3',sans-serif;font-size:0.87rem;outline:none;resize:none;max-height:88px;line-height:1.45;color:var(--text);transition:border-color 0.18s}
+#chat-input:focus{border-color:var(--slate)}
+#chat-send{width:37px;height:37px;border-radius:7px;background:var(--slate);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.15s}
+#chat-send:hover{background:var(--slate-light)}
+#chat-send svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.5}
+#review-tab-content{flex:1;overflow-y:auto;padding:14px;display:none;flex-direction:column;gap:11px}
+#review-tab-content.active{display:flex}
+.rv-lbl{font-size:0.78rem;font-weight:600;color:var(--text);margin-bottom:5px;display:block;letter-spacing:0.2px}
+.rv-ta{width:100%;border:1px solid var(--gray-light);border-radius:7px;padding:9px 12px;font-family:'Source Sans 3',sans-serif;font-size:0.85rem;resize:none;outline:none;color:var(--text);line-height:1.5;height:86px;transition:border-color 0.18s}
+.rv-ta:focus{border-color:var(--slate)}
+.rv-btn{background:var(--slate);color:#fff;border:none;cursor:pointer;padding:11px 18px;border-radius:7px;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:0.9rem;transition:background 0.18s;letter-spacing:0.2px}
+.rv-btn:hover{background:var(--slate-light)}
+.rv-result{background:var(--off);border:1px solid var(--gray-light);border-radius:7px;padding:13px;font-size:0.85rem;color:var(--text);line-height:1.65;display:none}
+.rv-result.show{display:block}
+.rv-result-lbl{font-size:0.68rem;font-weight:700;color:var(--steel);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:7px}
+.copy-btn{margin-top:9px;background:transparent;border:1px solid var(--gray-light);color:var(--gray);cursor:pointer;padding:6px 13px;border-radius:5px;font-size:0.76rem;font-weight:600;transition:all 0.15s;font-family:'Source Sans 3',sans-serif}
+.copy-btn:hover{border-color:var(--slate);color:var(--slate)}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="white" stroke="none"/></svg>
+    </div>
+    <div class="logo-wordmark">
+      <div class="logo-name">All Clear Drain Cleaning & Plumbing Co.</div>
+      <div class="logo-tagline">Memphis, Tennessee · Est. 2004</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#hiw">Process</a>
+    <a href="#testimonials">Reviews</a>
+    <div class="nav-divider"></div>
+    <a href="tel:9013677484" class="nav-phone">(901) 367-7484</a>
+  </div>
+  <a href="https://calendly.com/clientfacingae/30min" target="_blank" class="nav-cta">Schedule Service</a>
+</nav>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar">
+  <span>Available 24 / 7 for Emergencies</span>
+  <span class="ann-dot"></span>
+  <span>Licensed &amp; Insured</span>
+  <span class="ann-dot"></span>
+  <span>Serving Memphis &amp; Shelby County</span>
+  <span class="ann-dot"></span>
+  <span>Upfront Pricing — No Surprises</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Memphis's Most Trusted Plumbers
+    </div>
+    <h1>When It Matters,<br>We <span class="accent">Clear the Way.</span></h1>
+    <p class="hero-sub">Professional drain cleaning and plumbing services for homeowners across Memphis. Fast response, honest pricing, and work done right the first time.</p>
+    <div class="hero-actions">
+      <a href="tel:9013677484" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (901) 367-7484
+      </a>
+      <a href="https://calendly.com/clientfacingae/30min" target="_blank" class="btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Schedule Online
+      </a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <div class="trust-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></div>
+        Licensed &amp; Insured
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></div>
+        Same-Day Service
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></div>
+        20+ Years Experience
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=900" alt="Professional plumber at work">
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-cell">
+    <div class="stat-stars">★★★★★</div>
+    <div class="stat-lbl">5-Star Rated</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-val">30<span class="stat-unit">min</span></div>
+    <div class="stat-lbl">Avg. Response Time</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-val">20<span class="stat-unit">+</span></div>
+    <div class="stat-lbl">Years in Memphis</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-val">100<span class="stat-unit">%</span></div>
+    <div class="stat-lbl">Satisfaction Guaranteed</div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <span class="eyebrow">Our Work</span>
+  <h2>Professional Results, Every Time</h2>
+  <div class="gallery-grid">
+    <div class="gal-item">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Pipe repair">
+      <div class="gal-caption">Expert Pipe Repair</div>
+    </div>
+    <div class="gal-item">
+      <img src="https://images.unsplash.com/photo-1749532125405-70950966b0e5?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Drain cleaning">
+      <div class="gal-caption">Drain Cleaning</div>
+    </div>
+    <div class="gal-item">
+      <img src="https://images.unsplash.com/photo-1596394723269-b2cbca4e6313?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=700" alt="Water heater service">
+      <div class="gal-caption">Water Heater Service</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <span class="eyebrow">Services</span>
+  <h2>Complete Plumbing Solutions</h2>
+  <p class="sec-sub">From routine maintenance to full emergencies, our licensed plumbers handle every job with expertise and professionalism.</p>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-num">01</div>
+      <span class="svc-label">24 / 7 Response</span>
+      <h3>Emergency Plumbing</h3>
+      <p>Burst pipes and flooding require immediate action. We dispatch quickly around the clock — minimizing damage and restoring your home fast.</p>
+      <span class="svc-arrow">Available Now →</span>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">02</div>
+      <span class="svc-label">Our Specialty</span>
+      <h3>Drain Cleaning</h3>
+      <p>We clear blockages completely using professional-grade equipment — not just temporarily pushing clogs deeper. Drains that stay clear.</p>
+      <span class="svc-arrow">Learn More →</span>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">03</div>
+      <span class="svc-label">Same-Day Available</span>
+      <h3>Water Heater Service</h3>
+      <p>Repair and replacement for tank and tankless water heaters. Most jobs completed same day so you're never without hot water long.</p>
+      <span class="svc-arrow">Get a Quote →</span>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">04</div>
+      <span class="svc-label">Advanced Detection</span>
+      <h3>Leak Detection</h3>
+      <p>Hidden leaks cause structural damage and inflate water bills silently. We locate leaks behind walls and under slabs before they escalate.</p>
+      <span class="svc-arrow">Schedule Inspection →</span>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">05</div>
+      <span class="svc-label">All Pipe Types</span>
+      <h3>Pipe Repair & Replacement</h3>
+      <p>Cracked, corroded, or frozen pipes handled properly. From targeted repairs to complete repiping — lasting solutions, not temporary patches.</p>
+      <span class="svc-arrow">Request Service →</span>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">06</div>
+      <span class="svc-label">Precision Install</span>
+      <h3>Fixture Installation</h3>
+      <p>Sinks, toilets, faucets, and showers installed with precision. Clean workmanship with no drips, no callbacks, and no mess left behind.</p>
+      <span class="svc-arrow">Book Installation →</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="hiw">
+  <span class="eyebrow">Our Process</span>
+  <h2>Simple. Transparent. Reliable.</h2>
+  <p class="sec-sub">Three steps from first contact to job complete. No runaround, no hidden costs.</p>
+  <div class="steps-row">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Contact or Schedule</h3>
+      <p>Call us directly, chat with our assistant, or book online. We respond immediately for emergencies and confirm same-day appointments within the hour.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Receive Your Quote</h3>
+      <p>We assess the issue and provide a clear, written price before any work begins. No pressure, no guessing, no surprise invoices at the end.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Job Done Right</h3>
+      <p>Our licensed plumbers arrive on time and complete every job to the highest standard. We clean up after ourselves and stand behind our work.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <span class="eyebrow">Client Reviews</span>
+  <h2>What Memphis Homeowners Say</h2>
+  <p class="sec-sub">Hundreds of satisfied customers across Shelby County trust All Clear for their plumbing needs.</p>
+  <div class="reviews-grid">
+    <div class="rev-card">
+      <div class="rev-top">
+        <div class="rev-stars">★★★★★</div>
+        <span class="rev-source">Google Review</span>
+      </div>
+      <p class="rev-text">"Amazing work at a much lower price than competitors quoted — and completed in half the time. They have earned a customer for life."</p>
+      <div class="reviewer"><div class="r-init" style="background:var(--slate)">CH</div><div><div class="r-name">C. Henderson</div><div class="r-meta">Verified Customer</div></div></div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-top">
+        <div class="rev-stars">★★★★★</div>
+        <span class="rev-source">Google Review</span>
+      </div>
+      <p class="rev-text">"A frozen pipe burst at 6:30 PM. They arrived the next morning at 8:30 despite the ice and snow. Professional, efficient, and genuinely helpful."</p>
+      <div class="reviewer"><div class="r-init" style="background:var(--steel)">JW</div><div><div class="r-name">J. Washington</div><div class="r-meta">Verified Customer</div></div></div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-top">
+        <div class="rev-stars">★★★★★</div>
+        <span class="rev-source">Google Review</span>
+      </div>
+      <p class="rev-text">"Came out after hours to fix a leaking sink. Courteous, professional, and the work was impeccable. I recommend them without hesitation."</p>
+      <div class="reviewer"><div class="r-init" style="background:var(--green)">AF</div><div><div class="r-name">A. Ferguson</div><div class="r-meta">Verified Customer</div></div></div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-top">
+        <div class="rev-stars">★★★★★</div>
+        <span class="rev-source">Google Review</span>
+      </div>
+      <p class="rev-text">"The team is exceptional — timely, professional, and thorough on every visit. This is the only plumbing company I will ever call in Memphis."</p>
+      <div class="reviewer"><div class="r-init" style="background:var(--slate-light)">DW</div><div><div class="r-name">D. Williams</div><div class="r-meta">Verified Customer</div></div></div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-top">
+        <div class="rev-stars">★★★★★</div>
+        <span class="rev-source">Google Review</span>
+      </div>
+      <p class="rev-text">"They stepped in when two other companies failed to deliver. Completed the job correctly the first time. Absolutely outstanding service."</p>
+      <div class="reviewer"><div class="r-init" style="background:var(--slate)">GC</div><div><div class="r-name">G. Coleman</div><div class="r-meta">Verified Customer</div></div></div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-top">
+        <div class="rev-stars">★★★★★</div>
+        <span class="rev-source">Google Review</span>
+      </div>
+      <p class="rev-text">"Outstanding work, fair pricing, and quick response. They were available when I needed them most. Highly recommended to all Memphis homeowners."</p>
+      <div class="reviewer"><div class="r-init" style="background:var(--steel)">RB</div><div><div class="r-name">R. Brooks</div><div class="r-meta">Verified Customer</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section id="guarantee">
+  <span class="eyebrow">Our Commitment</span>
+  <h2>What You Can Always Expect</h2>
+  <p class="sec-sub">Every job is backed by our license, our guarantee, and two decades of reputation in Memphis.</p>
+  <div class="g-row">
+    <div class="g-item">
+      <div class="g-icon-wrap">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+      </div>
+      <h3>Same-Day Service</h3>
+      <p>Most appointments confirmed and completed the same day you contact us.</p>
+    </div>
+    <div class="g-item">
+      <div class="g-icon-wrap">
+        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+      </div>
+      <h3>Satisfaction Guarantee</h3>
+      <p>If you are not satisfied with our work, we return to make it right at no charge.</p>
+    </div>
+    <div class="g-item">
+      <div class="g-icon-wrap">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Licensed &amp; Insured</h3>
+      <p>Every technician is fully licensed. Your home and investment are protected.</p>
+    </div>
+    <div class="g-item">
+      <div class="g-icon-wrap">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <h3>Upfront Pricing</h3>
+      <p>Written quotes provided before work begins. No hidden fees, ever.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <h2>Ready to Resolve Your Plumbing Issue?</h2>
+  <p>Contact our team today for fast, professional service. We serve Memphis and all of Shelby County.</p>
+  <div class="cta-row">
+    <a href="tel:9013677484" class="btn-dark">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (901) 367-7484
+    </a>
+    <a href="https://calendly.com/clientfacingae/30min" target="_blank" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Schedule Online
+    </a>
+    <button class="btn-outline" onclick="openChat()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Chat With Us
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <strong>All Clear Drain Cleaning &amp; Plumbing Co.</strong>
+    3663 Cherry Rd, Suite 101, Memphis, TN 38118
+    <div class="footer-phone">(901) 367-7484</div>
+  </div>
+  <div class="footer-right">
+    Licensed &amp; Insured · Memphis, TN<br>
+    © 2025 All Clear Drain Cleaning &amp; Plumbing Co.<br>
+    All Rights Reserved.
+  </div>
+</footer>
+
+<!-- CHAT WIDGET -->
+<div id="chat-widget">
+  <div id="chat-window">
+    <div class="chat-tabs">
+      <button class="chat-tab active" onclick="switchTab('chat')">Chat Assistant</button>
+      <button class="chat-tab" onclick="switchTab('review')">Review Response</button>
+    </div>
+    <div class="chat-hdr">
+      <div class="chat-av">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="chat-dot"></div>
+      </div>
+      <div class="chat-hdr-info">
+        <div class="chat-hdr-name">All Clear Assistant</div>
+        <div class="chat-hdr-status">Online · Replies instantly</div>
+      </div>
+      <button class="chat-close" onclick="closeChat()">✕</button>
+    </div>
+    <div id="chat-messages"></div>
+    <div class="chat-input-row" id="chat-input-row">
+      <textarea id="chat-input" placeholder="How can we help you today?" rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+      <button id="chat-send" onclick="sendMessage()">
+        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
+      </button>
+    </div>
+    <div id="review-tab-content">
+      <div><label class="rv-lbl">Paste a customer review to generate a response:</label>
+      <textarea class="rv-ta" id="review-input" placeholder="Paste the review text here…"></textarea></div>
+      <button class="rv-btn" onclick="generateReviewResponse()">Generate Professional Response</button>
+      <div id="review-result" class="rv-result">
+        <div class="rv-result-lbl">Your Response</div>
+        <div id="review-result-text"></div>
+        <button class="copy-btn" onclick="copyReview()">Copy to Clipboard</button>
+      </div>
+    </div>
+  </div>
+  <button id="chat-bubble" onclick="toggleChat()" title="Chat with us">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span class="notif">1</span>
+  </button>
+</div>
+
+<!-- Jotform AI Employee -->
+<script src='https://cdn.jotfor.ms/agent/embedjs/019d98ef5e5d749faa3a93ed8a8600faf5e5/embed.js'></script>
+
+<script>
+let chatHistory=[],chatOpen=false,greeted=false;
+let leadData={name:'',phone:'',service:''};
+let bookingStage=null;
+const CALENDLY='https://calendly.com/clientfacingae/30min';
+
+const SYS=`You are a professional customer service representative for All Clear Drain Cleaning and Plumbing Co., located at 3663 Cherry Rd Suite 101, Memphis, TN 38118. Phone: (901) 367-7484. Business hours: Monday–Friday 8 AM–5 PM. Emergency service available 24/7.
+
+SERVICES OFFERED: Drain cleaning (our specialty), emergency plumbing, water heater repair and installation, leak detection, pipe repair and replacement, bathroom and kitchen plumbing, fixture installation.
+SERVICE AREA: Memphis TN and surrounding Shelby County.
+PRICING: Always provide written upfront quotes before work begins. No hidden fees. All major credit cards accepted.
+
+EMERGENCY PROTOCOL: If a customer describes a burst pipe, active flooding, sewage backup, or no hot water — respond immediately: "This requires urgent attention. Please call us directly at (901) 367-7484 right now and we will dispatch a technician immediately."
+
+Maintain a professional, helpful, and reassuring tone at all times. Keep responses concise — 2 to 3 sentences. Never fabricate specific pricing. If you are unsure of something, offer to have a technician follow up directly.`;
+
+function toggleChat(){
+  chatOpen=!chatOpen;
+  document.getElementById('chat-window').classList.toggle('open',chatOpen);
+  document.querySelector('.notif').style.display='none';
+  if(chatOpen&&!greeted){
+    greeted=true;
+    setTimeout(()=>appendMessage('bot',
+      "Good day! I'm the All Clear assistant. I can answer questions about our services or <strong>schedule an appointment for you right now</strong>. How can I assist you today?"
+    ),300);
+  }
+}
+function openChat(){if(!chatOpen)toggleChat();}
+function closeChat(){chatOpen=false;document.getElementById('chat-window').classList.remove('open');}
+
+function makeSvg(path){return `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">${path}</svg>`}
+
+function appendMessage(role,html){
+  const c=document.getElementById('chat-messages');
+  const now=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+  const d=document.createElement('div');d.className=`msg ${role}`;
+  const avBot=`<div class="msg-av"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="white" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>`;
+  const avUser=`<div class="msg-av" style="background:var(--gray)"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="white" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>`;
+  d.innerHTML=`${role==='bot'?avBot:''}<div><div class="msg-bubble">${html}</div><div class="msg-time">${now}</div></div>${role==='user'?avUser:''}`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
+}
+function showTyping(){
+  const c=document.getElementById('chat-messages');
+  const d=document.createElement('div');d.className='msg bot';d.id='typing-indicator';
+  d.innerHTML=`<div class="msg-av"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="white" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="typing-dots"><span></span><span></span><span></span></div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
+}
+function hideTyping(){const e=document.getElementById('typing-indicator');if(e)e.remove();}
+
+function showBookingButton(){
+  const c=document.getElementById('chat-messages');
+  const d=document.createElement('div');d.className='msg bot';
+  d.innerHTML=`<div class="msg-av"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="white" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+  <div><div class="msg-bubble">
+    Thank you, <strong>${leadData.name}</strong>. Here is a summary of your request:<br><br>
+    <strong>Name:</strong> ${leadData.name}<br>
+    <strong>Phone:</strong> ${leadData.phone}<br>
+    <strong>Service:</strong> ${leadData.service}<br><br>
+    Please select a convenient appointment time below:<br><br>
+    <a href="${CALENDLY}" target="_blank"
+      style="display:inline-flex;align-items:center;gap:8px;background:var(--slate);color:#fff;padding:11px 20px;border-radius:5px;font-weight:600;font-size:0.87rem;text-decoration:none;margin:4px 0 8px;letter-spacing:0.3px;">
+      Select Appointment Time →
+    </a><br>
+    <span style="font-size:0.77rem;color:var(--gray)">A confirmation will be sent to you. For immediate assistance, call <strong>(901) 367-7484</strong>.</span>
+  </div><div class="msg-time">${new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</div></div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
+}
+
+async function sendMessage(){
+  const input=document.getElementById('chat-input');
+  const text=input.value.trim();if(!text)return;
+  input.value='';input.style.height='auto';
+  appendMessage('user',text);
+  const lo=text.toLowerCase();
+
+  if(!bookingStage&&(lo.includes('book')||lo.includes('schedule')||lo.includes('appoint')||lo.includes('set up')||lo.includes('come out'))){
+    bookingStage='name';chatHistory.push({role:'user',content:text});
+    appendMessage('bot',"I would be happy to schedule a service for you. May I start with your <strong>full name</strong>?");return;
+  }
+  if(bookingStage==='name'){
+    leadData.name=text.trim();bookingStage='phone';chatHistory.push({role:'user',content:text});
+    appendMessage('bot',`Thank you, <strong>${leadData.name}</strong>. What is the best <strong>phone number</strong> to reach you?`);return;
+  }
+  if(bookingStage==='phone'){
+    leadData.phone=text.trim();bookingStage='service';chatHistory.push({role:'user',content:text});
+    appendMessage('bot',`Got it. Finally, what <strong>service do you need?</strong><br><span style="font-size:0.8rem;color:var(--gray);display:block;margin-top:4px">e.g. drain cleaning · water heater · leak detection · pipe repair · emergency · fixture installation</span>`);return;
+  }
+  if(bookingStage==='service'){
+    leadData.service=text.trim();bookingStage='done';chatHistory.push({role:'user',content:text});
+    showBookingButton();
+    chatHistory.push({role:'assistant',content:`Lead captured: ${leadData.name}, ${leadData.phone}, ${leadData.service}. Calendly link provided.`});return;
+  }
+
+  chatHistory.push({role:'user',content:text});showTyping();
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:SYS,messages:chatHistory})
+    });
+    const data=await res.json();
+    const reply=data.content?.[0]?.text||"Please contact us directly at (901) 367-7484.";
+    hideTyping();appendMessage('bot',reply);chatHistory.push({role:'assistant',content:reply});
+  }catch(e){
+    hideTyping();appendMessage('bot','I am experiencing a connection issue. Please call us directly at <strong>(901) 367-7484</strong> and we will assist you right away.');
+  }
+}
+function handleKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();}}
+function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,88)+'px';}
+function switchTab(tab){
+  document.querySelectorAll('.chat-tab').forEach((t,i)=>t.classList.toggle('active',(i===0&&tab==='chat')||(i===1&&tab==='review')));
+  document.getElementById('chat-messages').style.display=tab==='chat'?'flex':'none';
+  document.getElementById('chat-input-row').style.display=tab==='chat'?'flex':'none';
+  document.getElementById('review-tab-content').classList.toggle('active',tab==='review');
+}
+async function generateReviewResponse(){
+  const review=document.getElementById('review-input').value.trim();
+  if(!review){alert('Please paste a customer review first.');return;}
+  const btn=document.querySelector('.rv-btn');btn.textContent='Generating…';btn.disabled=true;
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,
+        messages:[{role:'user',content:`Write a professional Google review response for All Clear Drain Cleaning and Plumbing Co., Memphis TN. Customer review: "${review}". If POSITIVE: thank sincerely, reinforce the quality of service, invite them back. If NEGATIVE: acknowledge professionally, apologize sincerely, offer to resolve the situation offline at (901) 367-7484. Keep to 3–4 sentences. Sign off as: The All Clear Team. Return only the response text, nothing else.`}]
+      })
+    });
+    const data=await res.json();
+    const text=data.content?.[0]?.text||'Unable to generate a response.';
+    document.getElementById('review-result-text').textContent=text;
+    document.getElementById('review-result').classList.add('show');
+  }catch(e){alert('Connection error. Please try again.');}
+  btn.textContent='Generate Professional Response';btn.disabled=false;
+}
+function copyReview(){
+  navigator.clipboard.writeText(document.getElementById('review-result-text').textContent)
+    .then(()=>{const b=document.querySelector('.copy-btn');b.textContent='Copied to Clipboard';setTimeout(()=>b.textContent='Copy to Clipboard',2000);});
+}
+</script>
+</body>
+</html>
